@@ -1,5 +1,5 @@
 import React from 'react'
-import { PageTitle, ServiceCard } from '../components'
+import { Motion, PageTitle, ServiceCard } from '../components'
 import { useServicesListQuery } from "../store/api/api";
 
 export default function Services() {
@@ -8,7 +8,7 @@ export default function Services() {
     });
 
     return (
-        <>
+        <Motion>
             <PageTitle title="Xizmatlar" />
             <div className='container mt-6 mx-auto'>
             {isLoading
@@ -24,7 +24,7 @@ export default function Services() {
                 ))
             }
             </div>
-        </>
+        </Motion>
     )
 }
 

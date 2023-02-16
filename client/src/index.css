@@ -19,7 +19,8 @@
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
   color: #32323b;
-  --current: #2dd4bf;
+  --current: #6469ff;
+  --current-dark: #4549c2;
   --warning:#faebd7;
   --success: #03dac6;
   --danger: #ff0266;
@@ -27,25 +28,25 @@
 }
 ::-moz-selection { /* Code for Firefox */
   color: white;
-  background: #2dd4bf;
+  background: #6469ff;
 }
 
 ::selection {
   color: white;
-  background: #2dd4bf;
+  background: #6469ff;
 }
 body::-webkit-scrollbar {
   width: 11px;
 }
 body {
   scrollbar-width: thin;
-  scrollbar-color: #2dd4bf #f8f8f8;
+  scrollbar-color: #6469ff #f8f8f8;
 }
 body::-webkit-scrollbar-track {
   background: #f8f8f8;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #2dd4bf ;
+  background-color: #6469ff ;
   border-radius: 6px;
   border: 3px solid #f8f8f8;
 }
@@ -97,10 +98,10 @@ h1 {
 }
 
 a{
-  color: #2dd4bf;
+  color: #6469ff;
 }
 a:hover{
-  color: #14b8a6;
+  color: #6469ff;
 }
 input{
   height: 2.5rem;
@@ -135,4 +136,14 @@ select:-webkit-autofill:focus{
   margin-top: 5px;
   margin-left: 10px;
   color: var(--danger);
+}
+
+.progress-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgb(73, 72, 72);
+  transform-origin: 0%;
 }

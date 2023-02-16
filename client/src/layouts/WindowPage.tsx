@@ -1,9 +1,10 @@
 import { useEffect, Suspense, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
-import { Header, Loading, PageTitle } from '../components';
+import { Header, Loader, SmoothScroll } from '../components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 function wait(time: number) {
     return new Promise(resolve => {
@@ -29,10 +30,10 @@ export default function WindowPage() {
     return (
         <>
             <Header />
-            <div className=''>
-                <LoadingBar color="#fff" ref={ref} shadow={true} className="z-50 shadow-md shadow-white" />
-                <Suspense fallback={<Loading />}>
-                    <div className="transition-all w-full break-words overflow-x-hidden min-h-screen">
+            <div className='sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]'>
+                <LoadingBar color="#6469ff" ref={ref} shadow={true} className="z-50 shadow-md" />
+                <Suspense fallback={<Loader />}>
+                    <div className="w-full break-words">
                         <Outlet />
                     </div>
                 </Suspense>

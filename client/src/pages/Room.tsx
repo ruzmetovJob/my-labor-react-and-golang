@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginButton, PageTitle } from '../components'
+import { LoginButton, Motion, PageTitle } from '../components'
 import { MyAppContext } from '../contexts/ThemeContext';
 import defavatar from "/public/imgs/0.png";
 
@@ -8,7 +8,7 @@ export default function Room() {
   const [selectedImage, setSelectedImage] = useState(defavatar);
   const { userData } = useContext<any>(MyAppContext);
   return (
-    <>
+    <Motion>
       <PageTitle title="Mening sahifam" />
       <div className='container  mx-auto'>
 
@@ -31,6 +31,6 @@ export default function Room() {
           </div>
         }
       </div>
-    </>
+    </Motion>
   )
 }

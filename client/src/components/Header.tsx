@@ -6,6 +6,7 @@ import Str from '../assets/langs'
 import LoginButton from './LoginButton';
 import { MyAppContext } from '../contexts/ThemeContext';
 import LoginLink from './LoginLink';
+import { ScrollLinked } from '.';
 
 export default function Header() {
   const refProfile:any = useRef();
@@ -16,19 +17,19 @@ export default function Header() {
 
   return (
     <>
-      <nav className="bg-teal-400 sticky top-0 w-full  hidden md:block z-20">
+      <nav className="sticky top-0 w-full items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4] hidden md:block z-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center justify-between">
             <div className="flex items-center w-full">
-              <div className="flex-shrink-0">
-                <Link to="/"><span className="font-bold text-white text-xl">EPS-TOPIK.uz</span></Link>
+              <div className="flex-shrink-0  space-x-4">
+                <Link to="/"><span className="font-extrabold text-[#222328] text-[26px]">MY LABOR</span></Link>
               </div>
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="ml-10 flex items-baseline space-x-4 font-semibold">
                   <Link to="/services"
-                    className={(active_path[0] == `/services` ? 'text-teal-700' : 'text-gray-100') + " hover:text-teal-900 px-3 py-2 rounded-md text-md font-medium flex items-center transition-all"}
+                    className={(active_path[0] == `/services` ? 'text-[var(--current-dark)]' : 'text-gray-400') + " hover:text-[var(--current-dark)] px-3 py-2 rounded-md text-md font-medium flex items-center transition-all"}
                     aria-current="page">
-                    <svg viewBox="0 0 24 24" className="w-8 h-8 mr-3" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 mr-3" version="1.1" xmlns="http://www.w3.org/2000/svg">
                       <g id="页面-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                         <g id="Editor" transform="translate(-48.000000, -192.000000)">
                           <g id="list_check_3_line" transform="translate(48.000000, 192.000000)">
@@ -46,8 +47,8 @@ export default function Header() {
                   </Link>
 
                   <Link to="/ads"
-                    className={(active_path[0] == `/ads` ? 'text-teal-700' : 'text-gray-100') + " hover:text-teal-900 px-3 py-2 rounded-md text-md font-medium flex items-center transition-all"}>
-                    <svg viewBox="0 0 24 24" className="w-8 h-8 mr-3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    className={(active_path[0] == `/ads` ? 'text-[var(--current-dark)]' : 'text-gray-400') + " hover:text-gray-700 px-3 py-2 rounded-md text-md font-medium flex items-center transition-all"}>
+                    <svg viewBox="0 0 24 24" className="w-6 h-6 mr-3" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
                         d="M4 13.9999L5.57465 20.2985C5.61893 20.4756 5.64107 20.5642 5.66727 20.6415C5.92317 21.397 6.60352 21.9282 7.39852 21.9933C7.4799 21.9999 7.5712 21.9999 7.75379 21.9999C7.98244 21.9999 8.09677 21.9999 8.19308 21.9906C9.145 21.8982 9.89834 21.1449 9.99066 20.193C10 20.0967 10 19.9823 10 19.7537V5.49991M18.5 13.4999C20.433 13.4999 22 11.9329 22 9.99991C22 8.06691 20.433 6.49991 18.5 6.49991M10.25 5.49991H6.5C4.01472 5.49991 2 7.51463 2 9.99991C2 12.4852 4.01472 14.4999 6.5 14.4999H10.25C12.0164 14.4999 14.1772 15.4468 15.8443 16.3556C16.8168 16.8857 17.3031 17.1508 17.6216 17.1118C17.9169 17.0756 18.1402 16.943 18.3133 16.701C18.5 16.4401 18.5 15.9179 18.5 14.8736V5.1262C18.5 4.08191 18.5 3.55976 18.3133 3.2988C18.1402 3.05681 17.9169 2.92421 17.6216 2.88804C17.3031 2.84903 16.8168 3.11411 15.8443 3.64427C14.1772 4.55302 12.0164 5.49991 10.25 5.49991Z"
                         stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -63,7 +64,7 @@ export default function Header() {
                   <div className="ml-3 relative" ref={refProfile} >
                     <div>
                       <button type="button" onClick={() => setIsActive(!isActive)}
-                        className="flex max-w-xs items-center rounded-full text-sm focus:outline-none text-white focus:ring-2 focus:ring-white focus:ring-offset-1"
+                        className="flex max-w-xs items-center rounded-full text-sm focus:outline-none text-gray-400 focus:ring-2 focus:ring-white focus:ring-offset-1"
                         id="user-menu-button" aria-expanded="false" aria-haspopup="true">
                         <span className="sr-only">Open user menu</span>
                         <svg fill="currentColor" className="w-10 h-10" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -90,6 +91,7 @@ export default function Header() {
           </div>
         </div>
       </nav>
+      
 
 
       <div className="fixed bottom-0 bg-white w-full shadow-lg text-center visible md:invisible rounded-t-lg z-20">

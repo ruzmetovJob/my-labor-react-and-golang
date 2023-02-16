@@ -1,11 +1,11 @@
 import React from 'react'
 import Str from '../assets/langs'
-import {Hero} from '../components'
+import {Hero, Motion} from '../components'
 
 export default function Main() {
   return (
-    <>
-    <Hero />
-    </>
+    <Motion>
+    awdawdawdawd
+    </Motion>
   )
 }
