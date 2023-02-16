@@ -1,27 +1,28 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useDetectOutsideClick } from "../hooks";
+import ButtonMotion from "./ButtonMotion";
 
 
 type ServiceCardProps = {
-    title : string;
-    category : string;
-    location : string;
-    price : string;
-    date : string;
-    linkReg:   string;
+    title: string;
+    category: string;
+    location: string;
+    price: string;
+    date: string;
+    linkReg: string;
     linkVideo: string;
 }
 
 
 
-export default function ServiceCard(prop : ServiceCardProps) : JSX.Element {
+export default function ServiceCard(prop: ServiceCardProps): JSX.Element {
     const dropdownRef = useRef(null);
     const [navbarOpen, setNavbarOpen] = useDetectOutsideClick(dropdownRef, false);
     const onClick = () => setNavbarOpen(!navbarOpen);
 
     return (
-        <div className="lg:flex lg:items-center lg:justify-between m-2 p-4 rounded-md transition-all border bg-white hover:border-teal-400 select-none cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="#26f0d509" >
+        <div className="lg:flex lg:items-center lg:justify-between m-2 p-4 rounded-md transition-all border bg-white hover:border-[var(--current)] select-none cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="var(--current)" >
             <div className="min-w-0 flex-1">
                 <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">{prop.title}</h2>
                 <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
@@ -60,7 +61,7 @@ export default function ServiceCard(prop : ServiceCardProps) : JSX.Element {
             <div className="mt-5 flex lg:mt-0 lg:ml-4">
 
                 <span className="ml-3 hidden sm:block">
-                    <a href={prop.linkVideo} target="_blank" className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
+                    <a href={prop.linkVideo} target="_blank" className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[var(--current)] focus:ring-offset-2">
 
                         <svg className="-ml-1 mr-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z" />
@@ -71,17 +72,18 @@ export default function ServiceCard(prop : ServiceCardProps) : JSX.Element {
                 </span>
 
                 <span className="sm:ml-3">
-                    <Link to={prop.linkReg} type="button" className="inline-flex items-center rounded-md border border-transparent bg-teal-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-teal-700 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
-
-                        <svg className="-ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" />
-                        </svg>
-                        Ro‘yxatdan o‘tish
+                    <Link to={prop.linkReg} >
+                        <ButtonMotion>
+                            <svg className="-ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M2.695 14.763l-1.262 3.154a.5.5 0 00.65.65l3.155-1.262a4 4 0 001.343-.885L17.5 5.5a2.121 2.121 0 00-3-3L3.58 13.42a4 4 0 00-.885 1.343z" />
+                            </svg>
+                            Ro‘yxatdan o‘tish
+                        </ButtonMotion>
                     </Link>
                 </span>
 
                 <div className="relative ml-3 sm:hidden">
-                    <button type="button" ref={dropdownRef} onClick={onClick} className={" inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"} id="mobile-menu-button" aria-expanded="false" aria-haspopup="true">
+                    <button type="button" ref={dropdownRef} onClick={onClick} className={" inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[var(--current)] focus:ring-offset-2"} id="mobile-menu-button" aria-expanded="false" aria-haspopup="true">
                         Batafsil
                         <svg className="-mr-1 ml-2 h-5 w-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />

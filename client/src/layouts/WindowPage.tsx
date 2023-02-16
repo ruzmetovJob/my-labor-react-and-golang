@@ -30,7 +30,7 @@ export default function WindowPage() {
     return (
         <>
             <Header />
-            <div className='sm:p-8 px-4 py-8 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]'>
+            <div className='sm:p-8 p-0 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]'>
                 <LoadingBar color="#6469ff" ref={ref} shadow={true} className="z-50 shadow-md" />
                 <Suspense fallback={<Loader />}>
                     <div className="w-full break-words">

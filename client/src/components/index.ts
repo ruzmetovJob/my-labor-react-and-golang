@@ -3,6 +3,7 @@ import Loader from "./Loader";
 import Motion from "./Motion";
 import ScrollLinked from "./ScrollLinked";
 import SmoothScroll from "./SmoothScroll/SmoothScroll";
+import ButtonMotion from "./ButtonMotion";
 import Header from "./Header";
 import PageTitle from "./PageTitle";
 import Hero from "./Hero";
@@ -21,6 +22,7 @@ export {
     Motion,
     ScrollLinked,
     SmoothScroll,
+    ButtonMotion,
     Header,
     PageTitle,
     Hero,

@@ -9,7 +9,7 @@ export default function Services() {
 
     return (
         <Motion>
-            <PageTitle title="Xizmatlar" />
+            <PageTitle title="Xizmatlar" disc='Tashqi mehnat migratsiyasi agentligi tomonidan ko‘rsatilinadigan xizmatlar ro‘yxati' />
             <div className='container mt-6 mx-auto'>
             {isLoading
                 ?

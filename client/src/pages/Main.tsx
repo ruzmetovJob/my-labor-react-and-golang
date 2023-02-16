@@ -1,11 +1,12 @@
 import React from 'react'
 import Str from '../assets/langs'
-import {Hero, Motion} from '../components'
+import {ButtonMotion, Hero, Motion} from '../components'
 
 export default function Main() {
   return (
     <Motion>
-    awdawdawdawd
+        <ButtonMotion type="button" className="bg-white">Button </ButtonMotion>
+
     </Motion>
   )
 }
