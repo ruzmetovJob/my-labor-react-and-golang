@@ -1,0 +1,91 @@
+{
+
+    "code": "uz",
+
+    "title-lm": "LABOR-MIGRATION",
+
+    "title": "LABOR-MIGRATION - Dasturiy majmuasi",
+
+    "desc": "«Yagona milliy mehnat tizimi» doirasida ishga tushirilgan dasturiy majmua",
+
+    "page-not-found": "Sahifa tizimda topilmadi",
+
+    "main-page": "Bosh sahifa",
+
+    "go-back": "Ortga qaytish",
+
+    "all": "Barchasi",
+
+    "grid-layout": "Panjara ko‘rinishi",
+
+    "horizontal-layout": "Gorizontal ko‘rinishi",
+
+    "sign-in" : "Dasturga kirish",
+
+    "sign-in-with-oneid" : "OneID orqali kirish",
+
+    "sign-up" : "Ro‘yxatdan o‘tish",
+
+    "search": "Izlash...",
+
+    "services":"Xizmatlar",
+
+    "all-services":"Barcha xizmatlar",
+
+    "all-services-desc":"Tashqi mehnat migratsiyasi agentligi tomonidan ko‘rsatilinadigan xizmatlar ro‘yxati",
+
+    "service-desc": "xizmati to‘g‘risida maʼlumot",
+
+    "services-list":"Xizmatlar ro‘yxati",
+
+    "categories":"Sohalar",
+
+    "services-categories":"Xizmatlar sohalari",
+
+    "usage": "Foydalanish",
+
+    "new" : "Yangi",
+
+    "manual": "Yo‘riqnoma",
+
+    "service-desc-plus" : "xizmati to‘g‘risida maʼlumot",
+
+    "how-does-it-work": "Bu qanday ishlaydi?",
+
+    "organization" : "Tashkilot",
+
+    "connection" : "Bog‘lanish",
+
+    "service-users": "Xizmatdan foydalanuvchilar",
+
+    "individuals" : "Jismoniy shaxslar",
+
+    "legal-entities" : "Yuridik  shaxslar",
+
+    "individuals-and-legal-entities" : "Jismoniy va yuridik shaxslar",
+
+    "require-docs" : "Xizmatni ko‘rsatish uchun kerak bo‘ladigan hujjatlar",
+
+    "service-period": "Xizmatni ko‘rsatish muddati",
+
+    "service-laws": "Xizmatni ko‘rsatishning huquqiy asosi",
+
+    "service-price" : "Xizmat narxi",
+
+    "service-video": "Foydalanish bo‘ycha video yo‘riqnoma",
+
+    "ERR_NETWORK": "Internet tarmog‘ida xatolik",
+
+    "state-symbols": "Davlat ramzlari",
+
+    "ministry": "Vazirlik",
+
+    "agency": "Agentlik",
+
+    "oneID-response-wait": "OneID tizimidan javob kutilmoqda...",
+
+    "something-went-wrong": "Noma`lum sababga ko‘ra xatolik :(",
+
+    "try-again": "Iltimos qayta urining"
+
+}

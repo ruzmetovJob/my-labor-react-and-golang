@@ -1,0 +1,35 @@
+[
+    {
+    "ID": 1,
+    "uz": "Хизматлар",
+    "oz": "Xizmatlar",
+    "ru": "Услуги",
+    "en": "Services",
+    "controller": "all-services",
+    "parent": "0",
+    "views": "0",
+    "create_date": "2021-02-04 17:32:50"
+    },
+    {
+    "ID": 3,
+    "uz": "Бўш иш ўринлари",
+    "oz": "Bo`sh ish o`rinlari",
+    "ru": "Вакансии",
+    "en": "Vacancies",
+    "controller": "all-jobs",
+    "parent": "0",
+    "views": "0",
+    "create_date": "2021-02-05 12:53:45"
+    },
+    {
+    "ID": 4,
+    "uz": "Малумотлар",
+    "oz": "Ma`lumotlar",
+    "ru": "Показатели",
+    "en": "Inidicators",
+    "controller": "articles",
+    "parent": "0",
+    "views": "0",
+    "create_date": "2021-02-05 12:55:03"
+    }
+    ]

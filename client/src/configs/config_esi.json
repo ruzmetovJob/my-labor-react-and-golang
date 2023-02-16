@@ -1,0 +1,6 @@
+{
+	"oneIdUrl" : "https://sso.egov.uz/sso/oauth/Authorization.do",
+	"oneIdClientId" : "labormigration_uz",
+	"oneIdState" : "IDPW",
+	"oneIdredirectUri" : "http://eps-topik.uz/login/oauth"
+}

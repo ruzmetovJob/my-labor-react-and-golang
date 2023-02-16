@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: 'Rubik', sans-serif, 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f9fafe;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  color: #32323b;
+  --current: #2dd4bf;
+  --warning:#faebd7;
+  --success: #03dac6;
+  --danger: #ff0266;
+}
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #2dd4bf;
+}
+
+::selection {
+  color: white;
+  background: #2dd4bf;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #2dd4bf #f8f8f8;
+}
+body::-webkit-scrollbar-track {
+  background: #f8f8f8;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2dd4bf ;
+  border-radius: 6px;
+  border: 3px solid #f8f8f8;
+}
+
+
+body {
+  margin: 0;padding: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  color: #32323b;
+}
+
+a{
+  color: #2dd4bf;
+}
+a:hover{
+  color: #14b8a6;
+}
+input{
+  height: 2.5rem;
+  border-color: #dadada;
+  padding: 11px 14px !important;
+  transition: .3s;
+  outline: none;
+  border: var(--current) solid 1.2px;
+  background-color: #fff !important;
+}
+input:focus-visible{
+  outline: none #03dac54f auto 1px;
+}
+input:-internal-autofill-selected {
+	background-color: #fff !important;
+	color: rgba(255, 255, 255, 0.87) !important;
+}
+
+.err{
+  font-size: 0.8rem;
+  margin-top: 5px;
+  margin-left: 10px;
+  color: var(--danger);
+}
