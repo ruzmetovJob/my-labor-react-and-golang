@@ -5,7 +5,6 @@ import { Header, Loader, SmoothScroll } from '../components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
 function wait(time: number) {
     return new Promise(resolve => {
         setTimeout(resolve, time)
@@ -13,7 +12,7 @@ function wait(time: number) {
 }
 
 export default function WindowPage() {
-    const ref:any = useRef(null);
+    const ref: any = useRef(null);
     const location = useLocation();
     useEffect(() => {
         window.scrollTo({ top: 0 });
@@ -30,10 +29,10 @@ export default function WindowPage() {
     return (
         <>
             <Header />
-            <div className='sm:p-8 p-0 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]'>
-                <LoadingBar color="#6469ff" ref={ref} shadow={true} className="z-50 shadow-md" />
+            <div className='sm:py-8 p-0 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]'>
+                <LoadingBar color="linear-gradient(90deg, #20AA3E 0%, #03A588 100%)" ref={ref} shadow={true} className="z-50 shadow-md" />
                 <Suspense fallback={<Loader />}>
-                    <div className="w-full break-words">
+                    <div className="w-full break-words" >
                         <Outlet />
                     </div>
                 </Suspense>

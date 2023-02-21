@@ -22,9 +22,9 @@ export default function ServiceCard(prop: ServiceCardProps): JSX.Element {
     const onClick = () => setNavbarOpen(!navbarOpen);
 
     return (
-        <div className="lg:flex lg:items-center lg:justify-between m-2 p-4 rounded-md transition-all border bg-white hover:border-[var(--current)] select-none cursor-pointer" data-mdb-ripple="true" data-mdb-ripple-color="var(--current)" >
+        <div className="lg:flex lg:items-center lg:justify-between m-2 p-4 rounded-md transition-all border bg-white hover:border-bluec select-none cursor-pointer shadow-card hover:shadow-cardhover transition-shadow" data-mdb-ripple="true" data-mdb-ripple-color="var(--current)" >
             <div className="min-w-0 flex-1">
-                <h2 className="text-2xl font-bold leading-7 text-gray-900 sm:truncate sm:text-3xl sm:tracking-tight">{prop.title}</h2>
+                <h2 className="text-2xl font-bold leading-7 text-bluec sm:truncate sm:text-3xl sm:tracking-tight">{prop.title}</h2>
                 <div className="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
                     <div className="mt-2 flex items-center text-sm text-gray-500">
 
@@ -58,7 +58,7 @@ export default function ServiceCard(prop: ServiceCardProps): JSX.Element {
                     </div>
                 </div>
             </div>
-            <div className="mt-5 flex lg:mt-0 lg:ml-4">
+            <div className="mt-5 flex lg:mt-0 lg:ml-4 items-center justify-center">
 
                 <span className="ml-3 hidden sm:block">
                     <a href={prop.linkVideo} target="_blank" className="inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[var(--current)] focus:ring-offset-2">
@@ -71,7 +71,7 @@ export default function ServiceCard(prop: ServiceCardProps): JSX.Element {
                     </a>
                 </span>
 
-                <span className="sm:ml-3">
+                <div className="sm:ml-3">
                     <Link to={prop.linkReg} >
                         <ButtonMotion>
                             <svg className="-ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -80,7 +80,7 @@ export default function ServiceCard(prop: ServiceCardProps): JSX.Element {
                             Ro‘yxatdan o‘tish
                         </ButtonMotion>
                     </Link>
-                </span>
+                </div>
 
                 <div className="relative ml-3 sm:hidden">
                     <button type="button" ref={dropdownRef} onClick={onClick} className={" inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-[var(--current)] focus:ring-offset-2"} id="mobile-menu-button" aria-expanded="false" aria-haspopup="true">
