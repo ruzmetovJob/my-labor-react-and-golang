@@ -1,22 +1,14 @@
 import { lazy } from 'react';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import WindowPage from './layouts/WindowPage';
+import MetronicStylePage from './layouts/MetronicStylePage';
 import { Ads, ErrorElement, Main, NotFound, OAuth, Out, Room, Services } from './pages';
 import { oauthLoader } from './pages/OAuth';
 import { EpsTopik } from './pages/services/index';
 
-
-const NotFoundLazy = lazy(() => wait(1000).then(()=> import("./pages/NotFound")));
-
-
-function wait(time: number){
-  return new Promise(resolve => {
-    setTimeout(resolve, time)
-  })
-}
+import "./assets/css/metronic.css";
 
 const router = createBrowserRouter(createRoutesFromElements(
-  <Route path="/" element={<WindowPage />} errorElement={<ErrorElement />} >
+  <Route path="/" element={<MetronicStylePage />} errorElement={<ErrorElement />} >
     <Route index element={<Main />} />
     <Route path='/login/oauth' element={<OAuth />} loader={oauthLoader} />
     <Route path='/login/out' element={<Out />} />
@@ -24,8 +16,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/services' element={<Services />} />
     <Route path='/services/test-2023' element={<EpsTopik />} />
     <Route path='/ads' element={<Ads />} />
-
-    <Route path="*" element={<NotFoundLazy />} />
+    <Route path="*" element={<NotFound />} />
   </Route>
 ))
 

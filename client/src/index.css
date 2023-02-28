@@ -40,15 +40,7 @@
   --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
 
 }
-::-moz-selection { /* Code for Firefox */
-  color: white;
-  background: var(--current);
-}
 
-::selection {
-  color: white;
-  background: var(--current);
-}
 body::-webkit-scrollbar {
   width: 14px;
 }

@@ -1,15 +1,17 @@
 import React from 'react'
-import { motion as m } from 'framer-motion';
+import { motion as m, AnimatePresence } from 'framer-motion';
 
-export default function Motion({children}:any):JSX.Element {
+export default function Motion({ children }: any): JSX.Element {
   return (
-    <m.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 0.95,ease: "easeInOut" }}
-    exit={{ opacity: 0 }}
-    >
+    <AnimatePresence exitBeforeEnter>
+      <m.div
+        initial={{ y: 20, opacity: 0.5 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -10, opacity: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         {children}
-    </m.div>
+      </m.div>
+    </AnimatePresence>
   )
 }
