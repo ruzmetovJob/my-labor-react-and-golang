@@ -265,6 +265,9 @@
         display: none;
     }
 }
+.logo-aside{
+    transition: opacity 300ms linear;
+}
 
 
 .menu-icon {

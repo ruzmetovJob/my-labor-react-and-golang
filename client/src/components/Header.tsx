@@ -24,14 +24,13 @@ export default function Header({ title, disc = ' ' }: PageTitleProps): JSX.Eleme
         const header: any = document.querySelector('.header-section');
         const scrollTop = pageWrapper.scrollTop;
         scrollTop >= 250 ? header.classList.add('is-sticky') : header.classList.remove('is-sticky');
-        console.log(scrollTop);
     };
 
 
     //https://preview.keenthemes.com/metronic8/demo2/assets/media/patterns/header-bg.jpg
     return (
         <header className="w-full bg-[var(--bs-header-general-bg-color)] h-[240px] sm:py-0 py-6 z-0">
-                <div className="header-section bg-[var(--bs-header-general-bg-color)] flex items-center grow justify-between w-full h-full text-white py-3 mx-auto">
+                <div className="header-section bg-[var(--bs-header-general-bg-color)] flex items-center grow justify-between w-full h-full text-white py-3 mx-auto z-10">
                     <Link to="/" className='logo-img ml-3'>
                         <img alt="Logo" src="https://preview.keenthemes.com/metronic8/demo9/assets/media/logos/demo9.svg" className="h-40px" />
                     </Link>

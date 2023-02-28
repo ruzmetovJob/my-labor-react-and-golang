@@ -11,6 +11,7 @@ import Header from "./Header";
 import HeaderSearch from "./HeaderSearch";
 import HeaderActions from "./HeaderActions";
 import MobileMenu from "./MobileMenu";
+import Logo from "./Logo";
 import PageTitle from "./PageTitle";
 import Hero from "./Hero";
 import LoginButton from "./LoginButton";
@@ -37,6 +38,7 @@ export {
     HeaderSearch,
     HeaderActions,
     MobileMenu,
+    Logo,
     PageTitle,
     Hero,
     LoginButton,

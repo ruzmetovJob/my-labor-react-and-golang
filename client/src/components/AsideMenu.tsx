@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import {Logo} from '.';
 
 
 export default function AsideMenu() {
@@ -8,9 +10,9 @@ export default function AsideMenu() {
 
     useEffect(() => {
         const pageWrapper: any = document.querySelector('.page-wrapper');
-        pageWrapper.addEventListener('scroll', isSticky);
+        //pageWrapper.addEventListener('scroll', isSticky);
         return () => {
-            pageWrapper.removeEventListener('scroll', isSticky);
+           // pageWrapper.removeEventListener('scroll', isSticky);
         };
     });
     /* Method that will fix header after a specific scrollable */
@@ -18,22 +20,21 @@ export default function AsideMenu() {
         const pageWrapper: any = document.querySelector('.page-wrapper');
         const header: any = document.querySelector('.logo-aside');
         const scrollTop = pageWrapper.scrollTop;
-        scrollTop >= 250 ? header.classList.add('invisible') : header.classList.remove('invisible');
-        console.log(scrollTop);
+        scrollTop >= 250 ? header.classList.add('opacity-0') : header.classList.remove('opacity-0');
     };
 
-    return ( 
-        <div className="bg-white p-4 shadow-lg sm:flex hidden flex-col min-w-[140px] z-90 justify-between">
+    return (
+        <div className="bg-white p-4 shadow-lg sm:flex hidden flex-col min-w-[140px] z-50 justify-between">
             <div className="aside-logo flex-column-auto pt-10 pt-lg-20 mx-auto">
-                <Link to="/" className='logo-aside'>
-                    <img alt="Logo" src="https://preview.keenthemes.com/metronic8/demo9/assets/media/logos/demo9.svg" className="h-40px" />
+                <Link to="/" className='logo-asides'>
+                    <Logo />
                 </Link>
             </div>
             <div className="h-full flex flex-col mx-auto justify-center my-24 py-2 gap-7">
                 <div>
                     <Link to="/">
                         <span className="flex justify-center items-center cursor-pointer tooltip" data-tooltip-content="Bosh sahifa" data-tooltip-place="right">
-                            <span className={((active_path[0] == `/`|| active_path[0] == '-') ? 'bg-[var(--bs-aside-menu-icon-bg-color-active)] text-white' : 'text-[var(--bs-text-gray-400)]  hover:text-[var(--bs-primary)]') + " menu-icon "}>
+                            <span className={((active_path[0] == `/` || active_path[0] == '-') ? 'bg-[var(--bs-aside-menu-icon-bg-color-active)] text-white' : 'text-[var(--bs-text-gray-400)]  hover:text-[var(--bs-primary)]') + " menu-icon "}>
                                 <span className="svg-icon svg-icon-2x">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
