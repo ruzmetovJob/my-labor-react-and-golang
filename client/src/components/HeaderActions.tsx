@@ -1,5 +1,5 @@
 import React from 'react'
-import Str from '../assets/langs'
+import Str from 'assets/langs'
 
 export default function HeaderActions() {
     return (
@@ -42,7 +42,7 @@ export default function HeaderActions() {
             </button>
             <button className="relative bg-[var(--bs-primary)] rounded-xl p-2.5 px-3 mr-2 text-white flex text-sm" >
 
-                <span className='ml-1'>New Goal</span>
+                <span className='ml-1'>Kabinet</span>
             </button>
         </div>
     )

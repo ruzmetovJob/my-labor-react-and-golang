@@ -1,5 +1,5 @@
-import { Motion, PageTitle } from "../components";
-import { AdsCard } from "../components";
+import { Motion, PageTitle } from "components";
+import { AdsCard } from "components";
 
 
 export default function Ads(): JSX.Element {

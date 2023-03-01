@@ -1,6 +1,6 @@
 import React from 'react'
-import { Motion, PageTitle, ServiceCard } from '../components'
-import { useServicesListQuery } from "../store/api/api";
+import { Motion, PageTitle, ServiceCard } from 'components'
+import { useServicesListQuery } from "store/api/api";
 
 export default function Services() {
     const { data, isLoading, error, refetch }: any = useServicesListQuery("", {

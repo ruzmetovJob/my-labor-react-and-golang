@@ -1,7 +1,7 @@
-import { useEffect, Suspense, useRef } from 'react';
+import { useEffect, Suspense, useRef, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
-import { AsideMenu, Loader, MobileMenu, PageLoader } from '../components';
+import { AsideMenu, MobileMenu, PageLoader } from 'components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-tooltip/dist/react-tooltip.css'
@@ -22,9 +22,7 @@ export default function MetronicStylePage():JSX.Element {
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
-        ref?.current?.continuousStart()
-        // scroll to the top of the browser window when changing route
-        // the window object is a normal DOM object and is safe to use in React.
+        ref?.current?.continuousStart();
         wait(Math.floor(Math.random() * 501)).then(() => {
             ref?.current?.complete();
         })
@@ -33,7 +31,7 @@ export default function MetronicStylePage():JSX.Element {
     return (
 
         <div ref={wrapper} className="flex flex-row min-h-screen relative" data-bs-theme="light">
-            <AsideMenu />
+            <AsideMenu/>
             <div className='page-wrapper w-full break-words bg-[#f9fafe] max-h-screen overflow-y-scroll overflow-x-hidden !relative'>
                 <LoadingBar color="linear-gradient(90deg, #009ef7 0%, #009ef7 100%)" height={3} ref={ref} shadow={true} className="z-50 shadow-md" />
                 <MobileMenu />
@@ -44,7 +42,7 @@ export default function MetronicStylePage():JSX.Element {
                 </Suspense>
             </div>
             <ToastContainer />
-            <Tooltip id="my-tooltip" anchorSelect=".tooltip" />
+            <Tooltip id="my-tooltip" anchorSelect=".tooltip" className='z-50' />
         </div>
     )
 }

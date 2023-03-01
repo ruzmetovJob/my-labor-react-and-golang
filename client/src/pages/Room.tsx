@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginButton, Motion, PageTitle } from '../components'
-import { MyAppContext } from '../contexts/ThemeContext';
+import { LoginButton, Motion, PageTitle } from 'components'
+import { MyAppContext } from 'contexts/ThemeContext';
 import defavatar from "/public/imgs/0.png";
 
 export default function Room() {
@@ -9,7 +9,7 @@ export default function Room() {
   const { userData } = useContext<any>(MyAppContext);
   return (
     <Motion>
-      <PageTitle title="Mening sahifam" />
+      <PageTitle title="Mening sahifam" disc={''} />
       <div className='container  mx-auto'>
 
       {userData?.uinfo?.pin &&

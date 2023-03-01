@@ -4,27 +4,16 @@ import { Link, useLocation } from 'react-router-dom';
 import {Logo} from '.';
 
 
+type AsideMenuProps = {
+    showMobile: boolean
+}
+
 export default function AsideMenu() {
     const location = useLocation();
     let active_path: RegExpMatchArray | string = location?.pathname?.match(/^\/[A-za-z\-]+/g) || '-'
 
-    useEffect(() => {
-        const pageWrapper: any = document.querySelector('.page-wrapper');
-        //pageWrapper.addEventListener('scroll', isSticky);
-        return () => {
-           // pageWrapper.removeEventListener('scroll', isSticky);
-        };
-    });
-    /* Method that will fix header after a specific scrollable */
-    const isSticky = (e: any) => {
-        const pageWrapper: any = document.querySelector('.page-wrapper');
-        const header: any = document.querySelector('.logo-aside');
-        const scrollTop = pageWrapper.scrollTop;
-        scrollTop >= 250 ? header.classList.add('opacity-0') : header.classList.remove('opacity-0');
-    };
-
     return (
-        <div className="bg-white p-4 shadow-lg sm:flex hidden flex-col min-w-[140px] z-50 justify-between">
+        <div className={"bg-white p-4 shadow-lg sm:flex flex-col min-w-[140px] z-50 justify-between hidden"}>
             <div className="aside-logo flex-column-auto pt-10 pt-lg-20 mx-auto">
                 <Link to="/" className='logo-asides'>
                     <Logo />

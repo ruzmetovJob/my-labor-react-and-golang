@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 
-import esi_config from '../configs/config_esi.json'
-import Str from '../assets/langs'
-import { MyAppContext } from '../contexts/ThemeContext';
+import esi_config from 'configs/config_esi.json'
+import Str from 'assets/langs'
+import { MyAppContext } from 'contexts/ThemeContext';
 import { Link } from 'react-router-dom';
 
 export default function LoginLink() {
@@ -20,8 +20,8 @@ export default function LoginLink() {
         )
     }else{
         return (
-            <Link to="/" className="bg-white hover:bg-teal-800 border border-2 border-teal-800 hover:border-teal-600 transition-all inline-flex items-center justify-center rounded-lg py-3 px-7 text-center text-base font-medium text-sky-800 hover:text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10  z-10">
-                <img src={userData?.lm?.images?.result} className='w-6 h-6 mr-3 rounded-full border border-2 border-teal-800' />{userData?.uinfo?.first_name}
+            <Link to="/" className="bg-white hover:bg-teal-800 border-2 border-teal-800 hover:border-teal-600 transition-all inline-flex items-center justify-center rounded-lg py-3 px-7 text-center text-base font-medium text-sky-800 hover:text-white hover:bg-opacity-90 sm:px-10 lg:px-8 xl:px-10  z-10">
+                <img src={userData?.lm?.images?.result} className='w-6 h-6 mr-3 rounded-full border-2 border-teal-800' />{userData?.uinfo?.first_name}
             </Link>
             )
     }

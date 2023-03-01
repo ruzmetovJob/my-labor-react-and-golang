@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
-import { ResponseApi, ServiceDateEpsTopik } from "../../interfaces"
+import { ResponseApi, ServiceDateEpsTopik } from "interfaces"
 
 export const Api = createApi({
     reducerPath: "api/v2",

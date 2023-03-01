@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { MyAppContext } from "../contexts/ThemeContext";
+import { MyAppContext } from "contexts/ThemeContext";
 
 
 export default function Out(){

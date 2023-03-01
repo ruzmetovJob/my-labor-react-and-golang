@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRouteError } from 'react-router-dom'
-import Str from '../assets/langs'
+import Str from 'assets/langs'
 
 
 export default function ErrorElement() {

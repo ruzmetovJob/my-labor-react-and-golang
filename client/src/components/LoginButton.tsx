@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 
-import esi_config from '../configs/config_esi.json'
-import Str from '../assets/langs'
-import { MyAppContext } from '../contexts/ThemeContext';
+import esi_config from 'configs/config_esi.json'
+import Str from 'assets/langs'
+import { MyAppContext } from 'contexts/ThemeContext';
 import { Link } from 'react-router-dom';
 
 export default function LoginButton() {

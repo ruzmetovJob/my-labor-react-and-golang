@@ -1,11 +1,11 @@
 import { lazy } from 'react';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import MetronicStylePage from './layouts/MetronicStylePage';
-import { Ads, ErrorElement, Main, NotFound, OAuth, Out, Room, Services } from './pages';
-import { oauthLoader } from './pages/OAuth';
-import { EpsTopik } from './pages/services/index';
+import MetronicStylePage from 'layouts/MetronicStylePage';
+import { Ads, ErrorElement, Main, NotFound, OAuth, Out, Room, Services } from 'pages';
+import { oauthLoader } from 'pages/OAuth';
+import { EpsTopik } from 'pages/services/index';
 
-import "./assets/css/metronic.css";
+
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<MetronicStylePage />} errorElement={<ErrorElement />} >

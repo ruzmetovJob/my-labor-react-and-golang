@@ -1,5 +1,5 @@
 import React from 'react'
-import Str from '../assets/langs'
+import Str from 'assets/langs'
  
 export default function HeaderSearch() {
     return (

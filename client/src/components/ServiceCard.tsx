@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useDetectOutsideClick } from "../hooks";
+import { useDetectOutsideClick } from "hooks";
 import ButtonMotion from "./ButtonMotion";
 
 

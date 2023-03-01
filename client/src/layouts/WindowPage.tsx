@@ -1,7 +1,7 @@
 import { useEffect, Suspense, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
-import { Header, Loader, SmoothScroll } from '../components';
+import { Header, Loader, SmoothScroll } from 'components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -28,7 +28,7 @@ export default function WindowPage() {
 
     return (
         <>
-            <Header />
+            <Header title={''} disc={''} />
             <div className='sm:py-8 p-0 w-full bg-[#f9fafe] min-h-[calc(100vh-73px)]'>
                 <LoadingBar color="linear-gradient(90deg, #20AA3E 0%, #03A588 100%)" ref={ref} shadow={true} className="z-50 shadow-md" />
                 <Suspense fallback={<Loader />}>

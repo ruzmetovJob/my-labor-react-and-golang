@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { useLazyPaymentsQuery, usePaymentsQuery } from "../store/api/api"
-import { errorNotify } from "../utils"
+import { useLazyPaymentsQuery, usePaymentsQuery } from "store/api/api"
+import { errorNotify } from "utils"
 
 type BannerProps = {
     pin: string,
