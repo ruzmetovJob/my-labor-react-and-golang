@@ -1,11 +1,11 @@
 {
   "name": "my-labor-client",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm version minor && tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "react-top-loading-bar": "^2.3.1"
   },
   "devDependencies": {
+    "@types/node": "^18.14.2",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^3.0.0",

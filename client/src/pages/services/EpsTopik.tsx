@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { BannerPayments, LoginButton, MilliyQR, PageTitle } from "../../components";
-import { MyAppContext } from "../../contexts/ThemeContext";
-import { useMyServicesOneQuery, useServiceSaveMutation } from "../../store/api/api";
-import { ageCalculator, errorNotify, succesNotify, toBase64 } from "../../utils";
+import { BannerPayments, LoginButton, MilliyQR, PageTitle } from "components";
+import { MyAppContext } from "contexts/ThemeContext";
+import { useMyServicesOneQuery, useServiceSaveMutation } from "store/api/api";
+import { ageCalculator, errorNotify, succesNotify, toBase64 } from "utils";
 import { EpsTopikShow, LoadingShow } from "./show";
 import defavatar from "/public/imgs/0.png";
 
@@ -117,7 +117,7 @@ export default function EpsTopik(): JSX.Element {
 
     return (
         <>
-            <PageTitle title="Xizmatlar" />
+            <PageTitle title="Xizmatlar" disc={""} />
             <main className="my-3 mb-12 sm:mx-14">
                 <div className="w-full mx-auto md:flex block">
                     <div className="md:w-2/5 p-4">

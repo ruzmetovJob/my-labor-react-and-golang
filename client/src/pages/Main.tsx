@@ -11,7 +11,7 @@ export default function Main() {
         <div className="max-w-6xl mx-auto grid grid-cols-3 gap-6">
           <div className='grid grid-cols-2 gap-6'>
 
-            <Link to=''>
+            <Link to='/services'>
               <div className='bg-white rounded-xl shadow-md text-gray-600 hover:text-[var(--bs-primary)] p-6'>
                 <span className="text-xl mb-5 ms-n1">
                   <svg className='h-14 -24' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,7 +22,7 @@ export default function Main() {
                 <h4 className='font-semibold'>Xizmatlar ro`yxatri</h4>
               </div>
             </Link>
-            <Link to=''>
+            <Link to='/blog'>
               <div className='bg-white rounded-xl shadow-md text-gray-600 hover:text-[var(--bs-primary)] p-6'>
                 <span className="text-xl mb-5 ms-n1">
                   <svg className='h-14 -24' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1">
@@ -37,7 +37,7 @@ export default function Main() {
                 <h4 className='font-semibold'>Yangiliklar & Axborotlar</h4>
               </div>
             </Link>
-            <Link to=''>
+            <Link to='/help'>
               <div className='bg-white rounded-xl shadow-md text-gray-600 hover:text-[var(--bs-primary)] p-6'>
                 <span className="text-xl mb-5 ms-n1">
                   <svg className='h-14 -24' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" version="1.1">
@@ -51,7 +51,7 @@ export default function Main() {
                 <h4 className='font-semibold'>Yordam & Bog`lanish</h4>
               </div>
             </Link>
-            <Link to=''>
+            <Link to='/room'>
               <div className='bg-white rounded-xl shadow-md text-gray-600 hover:text-[var(--bs-primary)] p-6'>
                 <span className="text-xl mb-5 ms-n1">
                   <svg className='h-14 -24' viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

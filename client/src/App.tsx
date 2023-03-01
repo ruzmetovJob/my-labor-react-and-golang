@@ -4,6 +4,7 @@ import MetronicStylePage from 'layouts/MetronicStylePage';
 import { Ads, ErrorElement, Main, NotFound, OAuth, Out, Room, Services } from 'pages';
 import { oauthLoader } from 'pages/OAuth';
 import { EpsTopik } from 'pages/services/index';
+import CacheBuster from 'utils/CacheBuster';
 
 
 
@@ -22,7 +23,18 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <CacheBuster>
+        {({ loading, isLatestVersion, refreshCacheAndReload }:any) => {
+          if (loading) return null;
+          if (!loading && !isLatestVersion) {
+            refreshCacheAndReload();
+          }
+
+          return (
+            <RouterProvider router={router} />
+          );
+        }}
+      </CacheBuster>
   )
 }
 
