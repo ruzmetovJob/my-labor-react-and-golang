@@ -1,7 +1,7 @@
 import { useEffect, Suspense, useRef, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
-import { AsideMenu, MobileMenu, PageLoader } from 'components';
+import { AsideMenu, Footer, MobileMenu, PageLoader } from 'components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-tooltip/dist/react-tooltip.css'
@@ -40,6 +40,7 @@ export default function MetronicStylePage():JSX.Element {
                             <Outlet />
                         </div>
                 </Suspense>
+                <Footer />
             </div>
             <ToastContainer />
             <Tooltip id="my-tooltip" anchorSelect=".tooltip" className='z-50' />

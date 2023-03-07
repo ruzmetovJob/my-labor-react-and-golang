@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 
 import esi_config from 'configs/config_esi.json'
-import Str from 'assets/langs'
+import Str from 'assetss/langs'
 import { MyAppContext } from 'contexts/ThemeContext';
 import { Link } from 'react-router-dom';
 

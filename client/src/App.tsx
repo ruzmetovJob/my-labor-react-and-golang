@@ -1,10 +1,11 @@
-import { lazy } from 'react';
+import { useState } from 'react';
+import CacheBuster from 'utils/CacheBuster';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import MetronicStylePage from 'layouts/MetronicStylePage';
 import { Ads, ErrorElement, Main, NotFound, OAuth, Out, Room, Services } from 'pages';
 import { oauthLoader } from 'pages/OAuth';
 import { EpsTopik } from 'pages/services/index';
-import CacheBuster from 'utils/CacheBuster';
+import { RefreshModal } from 'components';
 
 
 
@@ -22,14 +23,17 @@ const router = createBrowserRouter(createRoutesFromElements(
 ))
 
 function App() {
+  const [confirm, setConfirm]:any = useState(null);
   return (
     <CacheBuster>
-        {({ loading, isLatestVersion, refreshCacheAndReload }:any) => {
+        {({ loading, isLatestVersion, refreshCacheAndReload,text }:any) => {
           if (loading) return null;
           if (!loading && !isLatestVersion) {
-            refreshCacheAndReload();
+            if(confirm===true) {
+              refreshCacheAndReload();
+            }
+            return (<RefreshModal title={"Dasturning yangi "+text+" versiyasi ishga tushirildi, sizda faol holatda eski versiya ishlayapti. Shuni inobatga olib yangilashingizni tafsiya qilamiz"} disc={text} handle={s => setConfirm(s)}/>)
           }
-
           return (
             <RouterProvider router={router} />
           );

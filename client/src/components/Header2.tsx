@@ -1,8 +1,8 @@
 import React, { useContext, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import { useDetectOutsideClick } from "hooks"
-import MenuData from 'assets/json/Menus.json'
-import Str from 'assets/langs'
+import MenuData from 'assetss/json/Menus.json'
+import Str from 'assetss/langs'
 import LoginButton from './LoginButton';
 import { MyAppContext } from 'contexts/ThemeContext';
 import LoginLink from './LoginLink';

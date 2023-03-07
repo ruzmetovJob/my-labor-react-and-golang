@@ -1,4 +1,4 @@
-import qr from "/public/imgs/milliybankqr.jpg"
+import qr from "/public/imgs/favicon-color.png"
 
 export default function MilliyQR() {
     return (

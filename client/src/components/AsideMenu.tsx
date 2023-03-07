@@ -16,7 +16,7 @@ export default function AsideMenu() {
         <div className={"bg-white p-4 shadow-lg sm:flex flex-col min-w-[140px] z-50 justify-between hidden"}>
             <div className="aside-logo flex-column-auto pt-10 pt-lg-20 mx-auto">
                 <Link to="/" className='logo-asides'>
-                    <Logo />
+                    <img alt="Logo" src="/imgs/favicon-color.png" className="h-[64px] bg-secondarys" />
                 </Link>
             </div>
             <div className="h-full flex flex-col mx-auto justify-center my-24 py-2 gap-7">

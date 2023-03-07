@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import Str from 'assets/langs'
+import Str from 'assetss/langs'
 import { Motion } from 'components'
 
 

@@ -2,6 +2,14 @@ import React from 'react';
 import packageJson from '../../package.json';
 const appVersion:string = packageJson.version;
 
+/************
+ * 
+ * FOYDALANUVCHIDA Cache ni YANGILASH UCHUN /public/meta.json file da yangilash lozim
+ * 
+ * 
+ * 
+ */
+
 // version from response - first param, local version second param
 const semverGreaterThan = (versionA:any, versionB:any) => {
   const versionsA = versionA.split(/\./g);
@@ -24,6 +32,7 @@ class CacheBuster extends React.Component<any,any> {
     this.state = {
       loading: true,
       isLatestVersion: false,
+      text: '',
       refreshCacheAndReload: () => {
         console.log('Clearing cache and hard reloading...')
         if (caches) {
@@ -31,11 +40,10 @@ class CacheBuster extends React.Component<any,any> {
           caches.keys().then(function(names) {
             for (let name of names) caches.delete(name);
           });
-          console.log('Cache cleared',caches);
+          localStorage.clear();
+          sessionStorage.clear();
+          window.location.reload();
         }
-
-        // delete browser cache and hard reload
-        //window.location.reload();
       }
     };
   }
@@ -49,17 +57,18 @@ class CacheBuster extends React.Component<any,any> {
 
         const shouldForceRefresh = semverGreaterThan(latestVersion, currentVersion);
         if (shouldForceRefresh) {
-          console.log(`We have a new version - ${latestVersion}. Should force refresh`);
-          this.setState({ loading: false, isLatestVersion: false });
+          console.log(`We have a new version - ${latestVersion}. Should force refresh. Yor bundle version is ${currentVersion}.`);
+          this.setState({ loading: false, isLatestVersion: false, text: `${latestVersion}` });
+
         } else {
           console.log(`You already have the latest version - ${latestVersion}. No cache refresh needed.`);
-          this.setState({ loading: false, isLatestVersion: true });
+          this.setState({ loading: false, isLatestVersion: true, text: `We have a new version - ${latestVersion}. Should force refresh`});
         }
       });
   }
   render() {
-    const { loading, isLatestVersion, refreshCacheAndReload }:any = this.state;
-    return this.props.children({ loading, isLatestVersion, refreshCacheAndReload });
+    const { loading, isLatestVersion, refreshCacheAndReload, text }:any = this.state;
+    return this.props.children({ loading, isLatestVersion, refreshCacheAndReload, text });
   }
 }
 

@@ -1,7 +1,7 @@
 import React, { Suspense, useContext, useEffect } from 'react'
 import { Link, useLoaderData, defer, Await, useNavigate } from 'react-router-dom'
 import { MyAppContext } from 'contexts/ThemeContext';
-import Str from 'assets/langs'
+import Str from 'assetss/langs'
 import { Loading, LoginButton } from 'components'
 import { toast } from 'react-toastify';
 

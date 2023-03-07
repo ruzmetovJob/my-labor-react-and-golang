@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import Str from 'assets/langs'
+import Str from 'assetss/langs'
 import LoginButton from './LoginButton';
 
 export default function Hero() {

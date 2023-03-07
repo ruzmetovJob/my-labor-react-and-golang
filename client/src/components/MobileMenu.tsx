@@ -24,7 +24,7 @@ export default function MobileMenu() {
             <div className="container flex  justify-between items-center">
                 <div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0">
                     <Link to="/">
-                        <img alt="Logo" src="https://preview.keenthemes.com/metronic8/demo9/assets/media/logos/demo9.svg" className="h-35px" />
+                        <img alt="Logo" src="/imgs/labor-migration-color-logo.png" className="h-[40px]" />
                     </Link>
                 </div>
                 <button className="btn btn-icon btn-active-color-primary cursor-pointer hover:text-[var(--bs-primary)] focus:text-[var(--bs-primary)] focus:outline-0" id="kt_aside_toggle" ref={refProfile} onClick={() => setIsActive(true)}>

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import HeaderActions from './HeaderActions'
 import HeaderSearch from './HeaderSearch'
-
+import bg from "../../public/imgs/herobg.png"
 
 type PageTitleProps = {
     title: string
@@ -28,11 +28,12 @@ export default function Header({ title, disc = ' ' }: PageTitleProps): JSX.Eleme
 
 
     //https://preview.keenthemes.com/metronic8/demo2/assets/media/patterns/header-bg.jpg
+    //linear-gradient(rgb(30 33 135 / 50%), rgb(7 2 70 / 50%), rgb(14 9 52 / 50%))
     return (
-        <header className="w-full bg-[var(--bs-header-general-bg-color)] h-[240px] sm:py-0 py-6 z-0">
-                <div className="header-section bg-[var(--bs-header-general-bg-color)] flex items-center grow justify-between w-full h-full text-white py-3 mx-auto z-10">
+        <header className="w-full bg-[var(--bs-header-general-bg-color)] bg-cover h-[240px] sm:py-0 py-6 z-0" style={{backgroundImage: `linear-gradient(rgb(30 33 135 / 50%), rgb(7 2 70 / 50%)), url(${bg})`}}>
+                <div className="header-section flex items-center grow justify-between w-full h-full text-white py-3 mx-auto z-10">
                     <Link to="/" className='logo-img ml-3'>
-                        <img alt="Logo" src="https://preview.keenthemes.com/metronic8/demo9/assets/media/logos/demo9.svg" className="h-40px" />
+                        <img alt="Logo" src="/imgs/favicon-color.png" className="h-[40px]" />
                     </Link>
                     <div className="flex-col justify-start items-center ml-3 text-left">
                         <h1 className="text-white text-3xl font-semibold text-left lg:max-w-lg md:max-w-md max-w-xs  truncate ...">{title}</h1>

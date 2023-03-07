@@ -4,13 +4,13 @@ import PageLoader from "./PageLoader";
 import Motion from "./Motion";
 import PageContent from "./PageContent";
 import ScrollLinked from "./ScrollLinked";
-import SmoothScroll from "./SmoothScroll/SmoothScroll";
 import ButtonMotion from "./ButtonMotion";
 import AsideMenu from "./AsideMenu";
 import Header from "./Header";
 import HeaderSearch from "./HeaderSearch";
 import HeaderActions from "./HeaderActions";
 import MobileMenu from "./MobileMenu";
+import Footer from "./Footer";
 import Logo from "./Logo";
 import PageTitle from "./PageTitle";
 import Hero from "./Hero";
@@ -20,6 +20,8 @@ import ServiceCard from "./ServiceCard";
 import AdsCard from "./AdsCard";
 import BannerPayments from "./BannerPayments";
 import MilliyQR from "./MilliyQR";
+import Modal from "./Modal";
+import RefreshModal from "./RefreshModal";
 
 
 
@@ -31,13 +33,13 @@ export {
     Motion,
     PageContent,
     ScrollLinked,
-    SmoothScroll,
     ButtonMotion,
     AsideMenu,
     Header,
     HeaderSearch,
     HeaderActions,
     MobileMenu,
+    Footer,
     Logo,
     PageTitle,
     Hero,
@@ -46,5 +48,7 @@ export {
     ServiceCard,
     AdsCard,
     BannerPayments,
-    MilliyQR
+    MilliyQR,
+    Modal,
+    RefreshModal
 }
