@@ -1,7 +1,7 @@
 import { useEffect, Suspense, useRef } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar';
-import { Header, Loader, SmoothScroll } from 'components';
+import { Header, Loader } from 'components';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 

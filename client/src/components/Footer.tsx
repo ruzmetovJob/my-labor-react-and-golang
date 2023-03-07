@@ -8,7 +8,7 @@ export default function Footer() {
         <footer className="max-w-8xl py-4 px-6 mx-auto bg-secondary">
 
             <div className="w-full flex flex-col sm:flex-row justify-between">
-                <div className="text-dark text-sm md:order-2">
+                <div className="text-dark text-sm md:order-2 order-1">
                     <span className="text-gray-400 font-semibold me-1">Bundle version - </span> <code>v{packageJson.version}</code>
                     <svg xmlns="http://www.w3.org/2000/svg" className='w-6 h-6 text-primary float-left' viewBox="0 0 24 24" version="1.1">
                         <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
